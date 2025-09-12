@@ -7,6 +7,9 @@ set(CMAKE_CXX_STANDARD 11) # for some reason glm doesn't support c++ 17
 add_executable(${PROJECT_NAME}
     src/main.cpp
 
+    src/engine/engine.h
+    src/engine/engine.cpp
+
     #glad
     thirdparty/glad/src/glad.c
 )
