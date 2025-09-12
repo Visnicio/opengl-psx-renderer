@@ -5,10 +5,15 @@
 
 #include "engine/engine.h"
 
+#include "utils/utils.h"
+
 int main() {
 
     Engine engine;
     engine.Init();
+
+    std::string vertShader = Utils::GetFileContents("src/shaders/vert.glsl");
+    std::string fragShader = Utils::GetFileContents("src/shaders/frag.glsl");
 
     while(!glfwWindowShouldClose(engine.GetWindow()))
     {

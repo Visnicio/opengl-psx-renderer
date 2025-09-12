@@ -10,6 +10,9 @@ add_executable(${PROJECT_NAME}
     src/engine/engine.h
     src/engine/engine.cpp
 
+    src/utils/utils.h
+    src/utils/utils.cpp
+
     #glad
     thirdparty/glad/src/glad.c
 )
