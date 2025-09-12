@@ -1,5 +1,5 @@
-#ifndef ENGINE_H
-#define ENGINE_H
+#ifndef ENGINE_CLASS_H
+#define ENGINE_CLASS_H
 
 class GLFWwindow; // forward declaration
 
