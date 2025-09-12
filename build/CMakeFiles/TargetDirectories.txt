@@ -1,3 +1,0 @@
-/home/vinicius/Desenvolvimento/c++ projects/opengl-psx-renderer/build/CMakeFiles/psx-renderer.dir
-/home/vinicius/Desenvolvimento/c++ projects/opengl-psx-renderer/build/CMakeFiles/edit_cache.dir
-/home/vinicius/Desenvolvimento/c++ projects/opengl-psx-renderer/build/CMakeFiles/rebuild_cache.dir
