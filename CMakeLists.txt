@@ -10,6 +10,9 @@ add_executable(${PROJECT_NAME}
     src/engine/engine.h
     src/engine/engine.cpp
 
+    src/engine/renderer/shader_program.h
+    src/engine/renderer/shader_program.cpp
+
     src/utils/utils.h
     src/utils/utils.cpp
 
@@ -17,7 +20,10 @@ add_executable(${PROJECT_NAME}
     thirdparty/glad/src/glad.c
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE thirdparty/glad/include) # add glad includes to the target include list
+target_include_directories(${PROJECT_NAME} PRIVATE 
+    thirdparty/glad/include
+    ${CMAKE_SOURCE_DIR}/src
+    ) # add glad includes to the target include list
 # target_include_directories(${PROJECT_NAME} PRIVATE thirdparty/glfw/include) # just the includes
 
 ## GLFW
