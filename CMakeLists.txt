@@ -12,6 +12,8 @@ add_executable(${PROJECT_NAME}
 
     src/engine/renderer/shader_program.h
     src/engine/renderer/shader_program.cpp
+    src/engine/renderer/vbo.h
+    src/engine/renderer/vbo.cpp
 
     src/utils/utils.h
     src/utils/utils.cpp

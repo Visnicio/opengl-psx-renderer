@@ -5,6 +5,7 @@
 
 #include "engine/engine.h"
 #include "engine/renderer/shader_program.h"
+#include "engine/renderer/vbo.h"
 
 #include "utils/utils.h"
 
@@ -21,11 +22,7 @@ int main() {
      0.0f,  0.5f, 0.0f
     };
     
-    unsigned int VBO;
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
+    VBO triangleVBO(vertices);
 
     unsigned int VAO;
     glGenVertexArrays(1, &VAO);
@@ -33,7 +30,7 @@ int main() {
     // 1. bind Vertex Array Object
     glBindVertexArray(VAO);
     // 2. copy our vertices array in a buffer for OpenGL to use
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ARRAY_BUFFER, triangleVBO.GetId());
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
     // 3. then set our vertex attributes pointers
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
